@@ -40,7 +40,7 @@ canvas {
 .toc-layers {
 	display: flex;
 	flex-direction: column;
-	gap: 2px;
+	gap: 4px;
 	overflow-y: auto;
 }
 	
@@ -53,25 +53,26 @@ canvas {
 
 .toc-layer {
 	display: grid;
-	gap: 2px;
+	gap: 1px;
 	grid-template-columns: 9fr 1fr;
-	grid-template-rows: 1fr;
+	grid-template-rows: 1.4fr 1fr;
 	grid-template-areas: 
-		'layer-name feature-count checkbox';
+		'layer-name layer-checkbox'
+		'layer-status layer-checkbox';
 	margin: 5px 5px 5px 10px;
 }
 
 .toc-layer-name {
 	grid-area: layer-name;
-	font-size: 12px;
+	font-size: 14px;
 }
 
-.toc-layer-feature-count {
-	grid-area: feature-count;
-	margin: auto;
+.toc-layer-status {
+	grid-area: layer-status;
+	font-size: 10px;
 }
 
 .toc-layer-checkbox-container {
-	grid-area: checkbox;
+	grid-area: layer-checkbox;
 	margin: auto;
 }
